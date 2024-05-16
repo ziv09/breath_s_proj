@@ -1,0 +1,124 @@
+.barcon {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0%;
+}
+
+.barcon img {
+    height: 100px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.barstyle {
+    list-style: none;
+    width: 600px;
+    height: 45px;
+    margin: 0%;
+    padding: 5px 50px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+}
+
+#bar:link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+#bar:hover {
+    text-decoration: underline 8px;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+#bar:visited {
+    color: white;
+}
+
+.inter {
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 30px;
+    margin: 30px 0px;
+}
+
+#lable {
+    font-size: 30px;
+    margin: 50px 0px;
+}
+
+.input {
+    outline: none;
+    margin-top: 10px;
+    padding: 5px 10px;
+    padding-left: 30px;
+    width: 800px;
+    border: 3px solid #000000;
+    background-color: #F4F4F4;
+    
+    font-size: 20px;
+}
+
+.textarea {
+    outline: none;
+    width: 950px;
+    height: 455px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 3px solid #000000;
+    
+    background-color: #F4F4F4;
+    font-size: 30px;
+    resize: none;
+}
+
+.btn {
+    background-color: #000000;
+    font-family: 'MantouSans-Regular';
+    padding: 5px 20px;
+    outline: none;
+    border: 3px solid #000000;
+    font-weight: 300;
+    font-size: 30px;color: #fff;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    font-family: 'MantouSans-Regular';
+    padding: 5px 20px;
+    outline: none;
+    border: 3px solid #000000;
+    font-weight: 300;
+    font-size: 30px;color: #000000;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.feedGroup{
+margin: 20px 0px;
+}
+
+.emailGroup{
+    margin-bottom: 30px;
+}
+
+.div1{
+    margin-left: 60px;
+}
+
+.img{
+    width: 400px;
+    margin-top: 410px;
+    margin-right: 100px;
+}
+
+.div2{
+    display: flex;
+    justify-content: space-between;
+}

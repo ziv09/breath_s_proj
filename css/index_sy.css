@@ -1,0 +1,43 @@
+.logocon {
+    display: flex;
+    justify-content: end;
+    margin-top: 350px;
+    margin-right: 300px;
+}
+
+.logocon img{
+    height: 300px;
+}
+
+.barcon{
+    display: flex;
+    justify-content: end;
+    margin-right: 550px;
+    margin-top: 25px;
+}
+#barstyle {
+    list-style: none;
+    width: 550px;
+    height: 45px;
+    padding: 0px 70px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+}
+
+#bar:link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+#bar:hover {
+    text-decoration: underline 8px;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+#bar:visited {
+    color: white;
+}
+

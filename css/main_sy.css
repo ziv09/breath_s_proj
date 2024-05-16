@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+}
+
+.body_index {
+    font-family: 'MantouSans-Regular';
+    background-color: #F4F4F4;
+    background-image: url(./images/b-logo.png);
+    background-repeat: no-repeat;
+    background-size: 1920px 1080px;
+    background-position: -900px 1px;
+}
+
+.body {
+    font-family: 'MantouSans-Regular';
+    background-color: #F4F4F4;
+    background-image: url(./images/b-logo.png);
+    background-repeat: no-repeat;
+    background-size: 1920px 1080px;
+    background-position: 1200px 20px;
+}
+.body_login{
+    font-family: 'MantouSans-Regular';
+    background-color: #F4F4F4;
+    background-image: url(./images/b-logo.png);
+    background-repeat: no-repeat;
+    background-size: 1920px 1080px;
+    background-position: 50px -20px;
+}
+
+.body_map{
+    font-family: 'MantouSans-Regular';
+    background-color: #F4F4F4;
+    background-image: url(./images/b-logo2.png);
+    background-repeat: no-repeat;
+    background-size: 5760px 3240px;
+    background-position: -1700px 20px;
+}
+
+
+@font-face {
+    font-family: MantouSans-Regular;
+    src: url('/webfont/MantouSans-Regular.woff2') format('woff2');
+}

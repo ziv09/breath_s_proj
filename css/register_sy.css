@@ -1,0 +1,102 @@
+
+    .img{
+        width: 300px;
+        margin-top: 450px;
+        margin-left: 100px;
+    }
+    .lable{
+        font-size: 30px;
+        margin: 50px 0px;
+    }
+    
+
+    .input1 {
+        outline: none;
+        margin-top: 10px;
+        padding: 15px 20px;
+        padding-left: 30px;
+        width: 900px;
+        border: 2px solid #000000;
+        border-radius: 10px;
+        font-size: 20px;
+        background-color: #f4f4f4;
+    }
+
+    .input2 {
+        outline: none;
+        margin-top: 10px;
+        padding: 15px 20px;
+        padding-left: 30px;
+        width: 500px;
+        border: 2px solid #000000;
+        border-radius: 10px;
+        font-size: 20px;
+        background-color: #f4f4f4;
+    }
+
+    
+    .input3 {
+        outline: none;
+        margin-top: 10px;
+        padding: 15px 20px;
+        padding-left: 30px;
+        width: 300px;
+        border: 2px solid #000000;
+        border-radius: 10px;
+        font-size: 20px;
+        background-color: #f4f4f4;
+    }
+
+    .btnGroup {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .btn {
+        background-color: #000000;
+        font-family: 'MantouSans-Regular';
+        padding: 5px 20px;
+        outline: none;
+        border: 3px solid #000000;
+        font-weight: 300;
+        font-size: 30px;color: #fff;
+        cursor: pointer;
+        
+    }
+    
+    .btn:hover {
+        background-color: #ffffff;
+        font-family: 'MantouSans-Regular';
+        padding: 5px 20px;
+        outline: none;
+        border: 3px solid #000000;
+        font-weight: 300;
+        font-size: 30px;color: #000000;
+        cursor: pointer;
+        
+    }
+
+    .div1{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .div2{
+        margin-right: 300px;
+        margin-top: 50px;
+    }
+
+    .titleGroup{
+        margin:50px 0px;
+    }
+
+    .interGroup{
+        margin:20px 0px;
+    }
+
+    .btnGroup{
+        margin-left: 800px;
+    }
+
+
