@@ -1,0 +1,28 @@
+{
+    "help": "https://data.kcg.gov.tw/api/3/action/help_show?name=datastore_search",
+    "success": true,
+    "result": {
+        "resource_id": "f5408845-0f47-49b5-b366-119e74ef95b1",
+        "fields": [
+            {
+                "type": "numeric",
+                "id": "lat"
+            },
+            {
+                "type": "numeric",
+                "id": "lng"
+            }
+        ],
+        "records": [
+            {
+                "lat": "22.625808",
+                "lng": "120.318142"
+            }
+        ],
+        "_links": {
+            "start": "/api/action/datastore_search?resource_id=f5408845-0f47-49b5-b366-119e74ef95b1",
+            "next": "/api/action/datastore_search?offset=100&resource_id=f5408845-0f47-49b5-b366-119e74ef95b1"
+        },
+        "total": 787
+    }
+}

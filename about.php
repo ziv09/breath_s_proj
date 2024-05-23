@@ -18,11 +18,19 @@
         <div>
             <nav>
                 <ul class="barstyle">
+<<<<<<< HEAD
                     <li><a href="./index.html" id="bar">Home</a></li>
                     <li><a href="./login.html" id="bar">Account</a></li>
                     <li><a href="./amount.html" id="bar">Money</a></li>
                     <li><a href="./map.html" id="bar">Map</a></li>
                     <li><a href="./about.html" id="bar">About</a></li>
+=======
+                    <li><a href="./index.php" id="bar">Home</a></li>
+                    <li><a href="./login.php" id="bar">Account</a></li>
+                    <li><a href="./amount.php" id="bar">Money</a></li>
+                    <li><a href="./map.php" id="bar">Map</a></li>
+                    <li><a href="./about.php" id="bar">About</a></li>
+>>>>>>> 2a96164 (123)
                 </ul>
             </nav>
         </div>

@@ -15,11 +15,19 @@
         <div>
             <nav>
                 <ul class="barstyle">
+<<<<<<< HEAD
                     <li><a href="./index.html" id="bar">Home</a></li>
                     <li><a href="./login.html" id="bar">Account</a></li>
                     <li><a href="./amount.html" id="bar">Money</a></li>
                     <li><a href="./map.html" id="bar">Map</a></li>
                     <li><a href="./about.html" id="bar">About</a></li>
+=======
+                    <li><a href="./index.php" id="bar">Home</a></li>
+                    <li><a href="./login.php" id="bar">Account</a></li>
+                    <li><a href="./amount.php" id="bar">Money</a></li>
+                    <li><a href="./map.php" id="bar">Map</a></li>
+                    <li><a href="./about.php" id="bar">About</a></li>
+>>>>>>> 2a96164 (123)
                 </ul>
             </nav>
         </div>
@@ -27,6 +35,7 @@
     <div class="login">
         <div class="login_set">
             <div class="login_txt">
+<<<<<<< HEAD
                 <h1 id="login_tit">LOGIN</h1>
                 <div class="loginGroup">
                     <label id="lable"> 帳號
@@ -46,6 +55,29 @@
                 </div>
             </div>
 
+=======
+                <form action="./php/login.php" method="get">
+                    <h1 id="login_tit">LOGIN</h1>
+                    <div class="loginGroup">
+                        <label id="lable"> 帳號
+                            <input class="input" type="email" name="mail" id="userID">
+                        </label>
+                    </div>
+                    <div class="loginGroup">
+                        <label id="lable">密碼
+                            <input class="input" type="password" name="pwd">
+                        </label>
+                    </div>
+                    <div class="btnGroup">
+                        <button class="btn">登入</button>
+                    </div>
+                    <div class="forGroup">
+                        <a href="./register.php" id="register">註冊帳號</a>
+                    </div>
+
+                </form>
+            </div>
+>>>>>>> 2a96164 (123)
         </div>
     </div>
 </body>
