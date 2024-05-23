@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <?php
 require_once './php/conn.php';
 session_start();
@@ -12,7 +10,6 @@ $result = mysqli_query($conn, $sql);
 $user_data = mysqli_fetch_array($result);
 
 ?>
->>>>>>> 2a96164 (123)
 <!DOCTYPE html>
 <html>
 
