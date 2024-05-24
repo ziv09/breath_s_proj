@@ -27,27 +27,6 @@
     <div class="login">
         <div class="login_set">
             <div class="login_txt">
-<<<<<<< HEAD
-                <h1 id="login_tit">LOGIN</h1>
-                <div class="loginGroup">
-                    <label id="lable"> 帳號
-                        <input class="input" type="email" id="userID">
-                    </label>
-                </div>
-                <div class="loginGroup">
-                    <label id="lable">密碼
-                        <input class="input" type="password">
-                    </label>
-                </div>
-                <div class="btnGroup">
-                    <button class="btn" onclick="location.href='./account.html'">登入</button>
-                </div>
-                <div class="forGroup">
-                    <a href="./register.html" id="register">註冊帳號</a>
-                </div>
-            </div>
-
-=======
                 <form action="./php/login.php" method="get">
                     <h1 id="login_tit">LOGIN</h1>
                     <div class="loginGroup">
@@ -69,7 +48,6 @@
 
                 </form>
             </div>
->>>>>>> 2a96164 (123)
         </div>
     </div>
 </body>

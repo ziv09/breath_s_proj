@@ -236,7 +236,7 @@
                             <div>
                                 <span>-800</span>&ensp;
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -252,7 +252,7 @@
                             <div>
                                 <span>-800</span>&ensp;
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -268,12 +268,12 @@
                             <div>
                                 <span>-800</span>&ensp;
                             </div>
-                            
+
                         </div>
                     </div>
                 </div><!--紀錄群組(寫了3個)串php-->
             </div>
-            
+
 
         </div>
     </div>
