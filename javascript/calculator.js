@@ -31,7 +31,7 @@ let updateDisplayVal = (clickObj) => {
     }
     
     displayVal += btnText; // 将点击的按钮文本内容追加到显示值上
-    displayValElement.innerHTML = displayVal; // 更新显示的值
+    displayValElement.value = displayVal; // 更新显示的值
 }
 
 // 执行运算
@@ -41,28 +41,28 @@ let performOperation = (clickObj) => {
         case '+':
             pendingVal = displayVal; // 将当前显示的值存储为待处理值
             displayVal = '0'; // 重置显示的值为0
-            displayValElement.innerText = displayVal; // 更新显示的值
+            displayValElement.value = displayVal; // 更新显示的值
             evalStringArray.push(pendingVal); // 将待处理值存入运算字符串数组
             evalStringArray.push('+'); // 存入加号
             break;
         case '-':
             pendingVal = displayVal;
             displayVal = '0';
-            displayValElement.innerText = displayVal;
+            displayValElement.value = displayVal;
             evalStringArray.push(pendingVal);
             evalStringArray.push('-');
             break;  
         case 'x':
             pendingVal = displayVal;
             displayVal = '0';
-            displayValElement.innerText = displayVal;
+            displayValElement.value = displayVal;
             evalStringArray.push(pendingVal);
             evalStringArray.push('*');
             break;
         case '÷':
             pendingVal = displayVal;
             displayVal = '0';
-            displayValElement.innerText = displayVal;
+            displayValElement.value = displayVal;
             evalStringArray.push(pendingVal);
             evalStringArray.push('/');
             break;  
@@ -70,7 +70,7 @@ let performOperation = (clickObj) => {
             evalStringArray.push(displayVal); // 将当前显示的值存入运算字符串数组
             let evaluation = eval(evalStringArray.join(' ')); // 计算运算字符串数组的结果
             displayVal = evaluation + ''; // 将结果转换为字符串形式
-            displayValElement.innerText = displayVal; // 更新显示的值
+            displayValElement.value = displayVal; // 更新显示的值
             evalStringArray = []; // 清空运算字符串数组
             break; 
         default:
@@ -79,43 +79,42 @@ let performOperation = (clickObj) => {
 }
 
 // 给所有数字按钮添加点击事件监听
-for(let i=0; i < calcNumBtns.length; i++){ 
-    calcNumBtns[i].addEventListener("click",updateDisplayVal,false) 
+for(let i = 0; i < calcNumBtns.length; i++){ 
+    calcNumBtns[i].addEventListener("click", updateDisplayVal, false) 
 }
 
 // 给所有运算符按钮添加点击事件监听
-for(let i=0; i < calcOperatorBtns.length; i++){ 
-    calcOperatorBtns[i].addEventListener("click",performOperation,false)
+for(let i = 0; i < calcOperatorBtns.length; i++){ 
+    calcOperatorBtns[i].addEventListener("click", performOperation, false)
 }
 
 const equalsBtn = document.getElementById("calc-equals");
 equalsBtn.addEventListener("click", performOperation);
-
 
 // 清除按钮点击事件处理
 clearBtn.onclick = () => {
     displayVal = "0"; // 将显示的值重置为0
     pendingVal = undefined; // 清空待处理值
     evalStringArray = []; // 清空运算字符串数组
-    displayValElement.innerHTML = displayVal; // 更新显示的值
+    displayValElement.value = displayVal; // 更新显示的值
 }
 
 // 退格按钮点击事件处理
 backspaceBtn.onclick = () => {
     let lengthOfDisplayVal = displayVal.length; // 获取显示的值的长度
-    displayVal = displayVal.slice(0, lengthOfDisplayVal -1); // 截取除最后一位之外的值
+    displayVal = displayVal.slice(0, lengthOfDisplayVal - 1); // 截取除最后一位之外的值
     
     if(displayVal === ""){
         displayVal = "0"; // 如果显示的值为空，则设置为0
     }
 
-    displayValElement.innerHTML = displayVal; // 更新显示的值
+    displayValElement.value = displayVal; // 更新显示的值
 }
 
 // 小数点按钮点击事件处理
 decimalBtn.onclick = () => {
     if(!displayVal.includes('.')){ // 如果显示的值中不包含小数点
-        displayVal +="."; // 将小数点追加到显示的值中
+        displayVal += "."; // 将小数点追加到显示的值中
     }
-    displayValElement.innerText = displayVal; // 更新显示的值
+    displayValElement.value = displayVal; // 更新显示的值
 }

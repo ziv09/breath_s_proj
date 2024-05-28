@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+if (isset($_SESSION['mail']))
+    header("Location: ./account.php");
+?>
 <!DOCTYPE html>
 <html>
 

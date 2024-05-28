@@ -44,5 +44,5 @@
 
 @font-face {
     font-family: MantouSans-Regular;
-    src: url('/webfont/MantouSans-Regular.woff2') format('woff2');
+    src: url('../webfont/MantouSans-Regular.woff2') format('woff2');
 }
