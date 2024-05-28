@@ -36,27 +36,26 @@ function getExpenditureRatio($conn, $mail, $total_expend, $class)
 
 $sql = "SELECT * FROM buyitems WHERE mail = '$mail'";
 $result = mysqli_query($conn, $sql);
-if (mysqli_num_rows($result) > 0) {
-    // 支出
-    $sql = "SELECT SUM(price) FROM buyitems WHERE mail = '$mail' AND record = '支出'";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
-    $total_expend = $row['SUM(price)'] == "" ? "0" : $row['SUM(price)'];
-    // 收入
-    $sql = "SELECT SUM(price) FROM buyitems WHERE mail = '$mail' AND record = '收入'";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
-    $total_income = $row['SUM(price)'] == "" ? "0" : $row['SUM(price)'];
-    // 各項支出比例
-    $breakfast_r = getExpenditureRatio($conn, $mail, $total_expend, "早餐"); // 早餐
-    $Lunch_r = getExpenditureRatio($conn, $mail, $total_expend, "午餐"); // 午餐
-    $dinner_r = getExpenditureRatio($conn, $mail, $total_expend, "晚餐"); // 晚餐
-    $entertainment_r = getExpenditureRatio($conn, $mail, $total_expend, "娛樂"); // 娛樂
-    $Shopping_r = getExpenditureRatio($conn, $mail, $total_expend, "購物"); // 購物
-    $necessary_r = getExpenditureRatio($conn, $mail, $total_expend, "日用品"); // 日用品
-    $traffic_r = getExpenditureRatio($conn, $mail, $total_expend, "交通"); // 交通
-    $other_r = getExpenditureRatio($conn, $mail, $total_expend, "其他"); // 其他
-}
+// 支出
+$sql = "SELECT SUM(price) FROM buyitems WHERE mail = '$mail' AND record = '支出'";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+$total_expend = $row['SUM(price)'] == "" ? "0" : $row['SUM(price)'];
+// 收入
+$sql = "SELECT SUM(price) FROM buyitems WHERE mail = '$mail' AND record = '收入'";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+$total_income = $row['SUM(price)'] == "" ? "0" : $row['SUM(price)'];
+// 各項支出比例
+$breakfast_r = getExpenditureRatio($conn, $mail, $total_expend, "早餐"); // 早餐
+$Lunch_r = getExpenditureRatio($conn, $mail, $total_expend, "午餐"); // 午餐
+$dinner_r = getExpenditureRatio($conn, $mail, $total_expend, "晚餐"); // 晚餐
+$entertainment_r = getExpenditureRatio($conn, $mail, $total_expend, "娛樂"); // 娛樂
+$Shopping_r = getExpenditureRatio($conn, $mail, $total_expend, "購物"); // 購物
+$necessary_r = getExpenditureRatio($conn, $mail, $total_expend, "日用品"); // 日用品
+$traffic_r = getExpenditureRatio($conn, $mail, $total_expend, "交通"); // 交通
+$other_r = getExpenditureRatio($conn, $mail, $total_expend, "其他"); // 其他
+
 ?>
 <!DOCTYPE html>
 <html>
