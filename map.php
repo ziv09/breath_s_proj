@@ -1,5 +1,24 @@
 <?php
+require_once './php/conn.php';
 session_start();
+
+// 個人種樹
+if (isset($_SESSION['mail'])) {
+    $mail = $_SESSION['mail'];
+
+    $sql = "SELECT SUM(garbageAmount) FROM buyitems WHERE mail = '$mail'";
+    if ($result = mysqli_query($conn, $sql)) {
+        $mytree = mysqli_fetch_assoc($result)['SUM(garbageAmount)'];
+    }
+} else {
+    $mytree = 0;
+}
+
+// 累積總數
+$sql = "SELECT SUM(garbageAmount) FROM buyitems";
+if ($result = mysqli_query($conn, $sql)) {
+    $alltree = mysqli_fetch_assoc($result)['SUM(garbageAmount)'];
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,12 +59,12 @@ session_start();
             <div class="treeinter">
                 <div>
                     <span>個人累積:</span>
-                    <br><span style="font-size:40px; color:#218919 ; margin: 0px;">150</span>
+                    <br><span style="font-size:40px; color:#218919 ; margin: 0px;"><?= $mytree ?></span>
                     <span>顆</span>
                 </div>
                 <div>
                     <span>累積總數:</span>
-                    <br><span style="font-size:40px; color:#DB3579 ;">2000</span>
+                    <br><span style="font-size:40px; color:#DB3579 ;"><?= $alltree ?></span>
                     <span>顆</span>
                 </div>
             </div>
@@ -53,6 +72,7 @@ session_start();
 
     </div>
     <div id="map"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script async
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDBZeCbyATr_E80XuTkboA_t1-PlukqI8&callback=initMap">
             var url = 'https://ruienyuski.github.io/git_test/itaiwan.json';

@@ -9,6 +9,18 @@ $sql = "SELECT * FROM account WHERE mail = '$mail'";
 $result = mysqli_query($conn, $sql);
 $user_data = mysqli_fetch_array($result);
 
+// 個人種樹
+if (isset($_SESSION['mail'])) {
+    $mail = $_SESSION['mail'];
+
+    $sql = "SELECT SUM(garbageAmount) FROM buyitems WHERE mail = '$mail'";
+    if ($result = mysqli_query($conn, $sql)) {
+        $mytree = mysqli_fetch_assoc($result)['SUM(garbageAmount)'];
+    }
+} else {
+    $mytree = 0;
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -60,7 +72,7 @@ $user_data = mysqli_fetch_array($result);
         </div>
     </div>
     <div class="tree">
-        <span class="span1">呼吸樹</span><span class="span2">150</span><span class="span1">顆</span>
+        <span class="span1">呼吸樹</span><span class="span2"><?= $mytree ?></span><span class="span1">顆</span>
     </div>
 
 </body>
