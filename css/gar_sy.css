@@ -50,11 +50,11 @@
     color: #fff;
     width: 800px;
     text-align: center;
-    margin-left: 250px;
+    
 }
 
 .container{
-    margin-top: 180px;
+    margin-top: 80px;
     margin-left: 100px;
 }
 
@@ -63,7 +63,7 @@
     width: 1200px;
     border: #000 solid 5px;
     margin-top: 20px;
-    margin-left: 20px;
+    
 }
 
 .table{
@@ -114,5 +114,14 @@ input[type="checkbox"]:checked::after {
 
 input[type="checkbox"]:hover {
     border-color: #bf8b2e;
+}
+
+.garrec{
+    height: 50px;
+    width: 1200px;
+    background-color: lightgray;
+    font-size: 30px;
+    border-radius: 20px;
+    margin-top: 20px;
 }
 

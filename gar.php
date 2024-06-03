@@ -122,7 +122,12 @@
                                 <option value="10">10</option>
                             </select></td>
                     </tr>
-
+                </table>
+            </div>
+            <div>
+                <div class="garrec">
+                  &ensp;1230
+                </div>
             </div>
 
     </div>
