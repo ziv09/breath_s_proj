@@ -45,27 +45,74 @@
 }
 
 .date{
-    font-size: 45px;
+    font-size:60px;
     background-color: #000;
     color: #fff;
-    width: 600px;
+    width: 800px;
     text-align: center;
+    margin-left: 250px;
+}
+
+.container{
+    margin-top: 180px;
+    margin-left: 100px;
 }
 
 .co_record{
-    height: 500px;
+    height: 180px;
     width: 1200px;
-    border: #000 solid 3px;
+    border: #000 solid 5px;
     margin-top: 20px;
+    margin-left: 20px;
 }
 
 .table{
+    margin: 10px 10px 10px 10px;
     font-size: 50px;
+    width: 1200px;
 }
 
 .select {
     background-color: lightgray;
     color: black;
-    border: 1px solid #000000; 
-    font-size: 30px;
+    border: none; 
+    border-radius: 10px;
+    font-size: 40px;
 }
+
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #000000;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    position: relative;
+    margin-left: 10px;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #bf8b2e;
+    border: 3px solid #bf8b2e;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "\2713";  /* 使用 Unicode 字符 √ */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+input[type="checkbox"]:hover {
+    border-color: #bf8b2e;
+}
+
