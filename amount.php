@@ -93,7 +93,6 @@ $other_r = getExpenditureRatio($conn, $mail, $total_expend, "其他"); // 其他
             <div class="main_container">
                 <div>
                     <button class="btn1 btn1-style" id="btn1">支&ensp;出</button>
-                    <button class="btn2 btn2-style" id="btn2">收&ensp;入</button>
                     <input id="record" type="hidden" name="record" value="支出">
                 </div>
                 <div>
@@ -273,7 +272,7 @@ $other_r = getExpenditureRatio($conn, $mail, $total_expend, "其他"); // 其他
                 </div>
             </div>
             <div class="colldisplay">
-                <div class="colldisplay_area"><!--紀錄群組(寫了3個)串php-->
+                <div class="colldisplay_area">
                     <div class="colldisplay_header">
                         <div class="colldisplay_header-close">
                             <img src="./images/close.png">
@@ -287,8 +286,37 @@ $other_r = getExpenditureRatio($conn, $mail, $total_expend, "其他"); // 其他
                             </div>
                         </div>
                     </div>
-                    <div>
-                        123
+                    <div class="colldisplay_container-txt "><!--紀錄文字-->
+                        <div>
+                            早餐
+                        </div>
+                        <div>
+                            -800
+                        </div>
+                    </div>
+                    <div class="colldisplay_container-txt "><!--紀錄文字-->
+                        <div>
+                            早餐
+                        </div>
+                        <div>
+                            -800
+                        </div>
+                    </div>
+                    <div class="colldisplay_container-txt "><!--紀錄文字-->
+                        <div>
+                            早餐
+                        </div>
+                        <div>
+                            -800
+                        </div>
+                    </div>
+                    <div class="colldisplay_container-txt "><!--紀錄文字-->
+                        <div>
+                            早餐
+                        </div>
+                        <div>
+                            -800
+                        </div>
                     </div>
                 </div>
                 <div class="colldisplay_area">
@@ -305,8 +333,37 @@ $other_r = getExpenditureRatio($conn, $mail, $total_expend, "其他"); // 其他
                             </div>
                         </div>
                     </div>
-                    <div>
-                        123
+                    <div class="colldisplay_container-txt "><!--紀錄文字-->
+                        <div>
+                            早餐
+                        </div>
+                        <div>
+                            -800
+                        </div>
+                    </div>
+                    <div class="colldisplay_container-txt "><!--紀錄文字-->
+                        <div>
+                            早餐
+                        </div>
+                        <div>
+                            -800
+                        </div>
+                    </div>
+                    <div class="colldisplay_container-txt "><!--紀錄文字-->
+                        <div>
+                            早餐
+                        </div>
+                        <div>
+                            -800
+                        </div>
+                    </div>
+                    <div class="colldisplay_container-txt "><!--紀錄文字-->
+                        <div>
+                            早餐
+                        </div>
+                        <div>
+                            -800
+                        </div>
                     </div>
                 </div>
                 <div class="colldisplay_area">
@@ -323,8 +380,37 @@ $other_r = getExpenditureRatio($conn, $mail, $total_expend, "其他"); // 其他
                             </div>
                         </div>
                     </div>
-                    <div>
-                        123
+                    <div class="colldisplay_container-txt "><!--紀錄文字-->
+                        <div>
+                            早餐
+                        </div>
+                        <div>
+                            -800
+                        </div>
+                    </div>
+                    <div class="colldisplay_container-txt "><!--紀錄文字-->
+                        <div>
+                            早餐
+                        </div>
+                        <div>
+                            -800
+                        </div>
+                    </div>
+                    <div class="colldisplay_container-txt "><!--紀錄文字-->
+                        <div>
+                            早餐
+                        </div>
+                        <div>
+                            -800
+                        </div>
+                    </div>
+                    <div class="colldisplay_container-txt "><!--紀錄文字-->
+                        <div>
+                            早餐
+                        </div>
+                        <div>
+                            -800
+                        </div>
                     </div>
                 </div>
             </div>
