@@ -181,8 +181,8 @@ $other_r = getExpenditureRatio($conn, $mail, $total_expend, "其他"); // 其他
                         <div class="sum">
                             <div class="sumdiv">
                                 <div>
-                                    <img class="spendintr" src="./images/spend/<?= $spendintr ?>.png"> <!--要用php引入-->
-                                    <span class="spendintr_txt"><?= $spendintr ?></span> <!--要用php引入-->
+                                    <img class="spendintr" src="./images/spend/<?= $spendintr ?>.png">
+                                    <span class="spendintr_txt"><?= $spendintr ?></span>
                                 </div>
                                 <input type="hidden" name="class" value="<?= $spendintr ?>">
                                 <input class="spendrecord" type="text" name="object">
@@ -272,147 +272,46 @@ $other_r = getExpenditureRatio($conn, $mail, $total_expend, "其他"); // 其他
                 </div>
             </div>
             <div class="colldisplay">
-                <div class="colldisplay_area">
-                    <div class="colldisplay_header">
-                        <div class="colldisplay_header-close">
-                            <img src="./images/close.png">
-                        </div>
-                        <div class="colldisplay_header-date">
-                            <div>
-                                &ensp;<span>2024/04/18</span>
+                <?php
+                $sql = "SELECT DISTINCT `time` FROM buyitems WHERE mail = '$mail'";
+                $result = mysqli_query($conn, $sql);
+                $time_data = mysqli_fetch_all($result, MYSQLI_BOTH);
+                foreach ($time_data as $time) {
+                    $time = $time['time'];
+                    $formatted_time = str_replace('-', '/', $time); // 2024/04/18
+                
+                    $sql = "SELECT SUM(price) FROM buyitems WHERE mail = '$mail' AND `time` = '$time'";
+                    $result = mysqli_query($conn, $sql);
+                    $day_total_expend = mysqli_fetch_assoc($result)['SUM(price)'];
+
+                    $sql = "SELECT `class`, `price` FROM buyitems WHERE mail = '$mail' AND `time` = '$time'";
+                    $result = mysqli_query($conn, $sql);
+                    $money_data = mysqli_fetch_all($result, MYSQLI_BOTH);
+                    ?>
+                    <div class="colldisplay_area">
+                        <div class="colldisplay_header">
+                            <div class="colldisplay_header-close">
+                                <img src="./images/close.png">
                             </div>
-                            <div>
-                                <span>-800</span>&ensp;
-                            </div>
-                        </div>
-                    </div>
-                    <div class="colldisplay_container-txt "><!--紀錄文字-->
-                        <div>
-                            早餐
-                        </div>
-                        <div>
-                            -800
-                        </div>
-                    </div>
-                    <div class="colldisplay_container-txt "><!--紀錄文字-->
-                        <div>
-                            早餐
-                        </div>
-                        <div>
-                            -800
-                        </div>
-                    </div>
-                    <div class="colldisplay_container-txt "><!--紀錄文字-->
-                        <div>
-                            早餐
-                        </div>
-                        <div>
-                            -800
-                        </div>
-                    </div>
-                    <div class="colldisplay_container-txt "><!--紀錄文字-->
-                        <div>
-                            早餐
-                        </div>
-                        <div>
-                            -800
-                        </div>
-                    </div>
-                </div>
-                <div class="colldisplay_area">
-                    <div class="colldisplay_header">
-                        <div class="colldisplay_header-close">
-                            <img src="./images/close.png">
-                        </div>
-                        <div class="colldisplay_header-date">
-                            <div>
-                                &ensp;<span>2024/04/18</span>
-                            </div>
-                            <div>
-                                <span>-800</span>&ensp;
+                            <div class="colldisplay_header-date">
+                                <div>
+                                    &ensp;<span><?= $time ?></span>
+                                </div>
+                                <div>
+                                    <span>-<?= $day_total_expend ?></span>&ensp;
+                                </div>
                             </div>
                         </div>
+                        <?php
+                        foreach ($money_data as $money) {
+                            echo "<div class='colldisplay_container-txt'><div>" . $money['class'] . "</div>";
+                            echo "<div>-" . $money['price'] . "</div></div>";
+                        }
+                        ?>
                     </div>
-                    <div class="colldisplay_container-txt "><!--紀錄文字-->
-                        <div>
-                            早餐
-                        </div>
-                        <div>
-                            -800
-                        </div>
-                    </div>
-                    <div class="colldisplay_container-txt "><!--紀錄文字-->
-                        <div>
-                            早餐
-                        </div>
-                        <div>
-                            -800
-                        </div>
-                    </div>
-                    <div class="colldisplay_container-txt "><!--紀錄文字-->
-                        <div>
-                            早餐
-                        </div>
-                        <div>
-                            -800
-                        </div>
-                    </div>
-                    <div class="colldisplay_container-txt "><!--紀錄文字-->
-                        <div>
-                            早餐
-                        </div>
-                        <div>
-                            -800
-                        </div>
-                    </div>
-                </div>
-                <div class="colldisplay_area">
-                    <div class="colldisplay_header">
-                        <div class="colldisplay_header-close">
-                            <img src="./images/close.png">
-                        </div>
-                        <div class="colldisplay_header-date">
-                            <div>
-                                &ensp;<span>2024/04/18</span>
-                            </div>
-                            <div>
-                                <span>-800</span>&ensp;
-                            </div>
-                        </div>
-                    </div>
-                    <div class="colldisplay_container-txt "><!--紀錄文字-->
-                        <div>
-                            早餐
-                        </div>
-                        <div>
-                            -800
-                        </div>
-                    </div>
-                    <div class="colldisplay_container-txt "><!--紀錄文字-->
-                        <div>
-                            早餐
-                        </div>
-                        <div>
-                            -800
-                        </div>
-                    </div>
-                    <div class="colldisplay_container-txt "><!--紀錄文字-->
-                        <div>
-                            早餐
-                        </div>
-                        <div>
-                            -800
-                        </div>
-                    </div>
-                    <div class="colldisplay_container-txt "><!--紀錄文字-->
-                        <div>
-                            早餐
-                        </div>
-                        <div>
-                            -800
-                        </div>
-                    </div>
-                </div>
+                    <?php
+                }
+                ?>
             </div>
 
 
