@@ -74,6 +74,9 @@ $other_r = getExpenditureRatio($conn, $mail, $total_expend, "其他"); // 其他
 </head>
 
 <body class="body">
+    <!-- 在 amount.php 中 -->
+<div id="scrollTo"></div>
+
     <div class="barcon">
         <img src="./images/logo.png" alt="">
         <div>

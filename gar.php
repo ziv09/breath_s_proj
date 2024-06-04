@@ -161,9 +161,12 @@
                 </div>
 
             </div>
+            <div class="tree">
+            <span class="span1">呼吸樹</span><span class="span2">2</span><span class="span1">顆&ensp;/&ensp;節省碳排</span><span class="span2">10</span><span class="span1">公斤</span>
+            </div>
         </div>
         <div class="r-container">
-            <button class="circle-btn"><span>NEXT</span></button>
+            <button onclick="window.location.href = './amount.php';" class="circle-btn"><span>NEXT</span></button>
         </div>
     </div>
 
@@ -172,6 +175,8 @@
 
 
 
+
 </body>
+<script src=".js"></script>
 
 </html>
