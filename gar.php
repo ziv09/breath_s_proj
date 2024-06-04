@@ -166,7 +166,7 @@
             </div>
         </div>
         <div class="r-container">
-            <button onclick="window.location.href = './amount.php';" class="circle-btn"><span>NEXT</span></button>
+            <button onclick="window.location.href = './amount.php';" class="circle-btn" id="btn"><span>NEXT</span></button>
         </div>
     </div>
 
@@ -177,6 +177,6 @@
 
 
 </body>
-<script src=".js"></script>
+<script src="nextpage.js"></script>
 
 </html>
