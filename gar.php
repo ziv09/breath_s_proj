@@ -38,101 +38,124 @@
         </div>
     </div>
     <div class="container">
-            <div class="date">
-                每日節省&ensp;|&ensp;<span id="current-date"></span>
+        <div class="date">
+            日常節省&ensp;|&ensp;<span id="current-date"></span>
+        </div>
+        <div class="co_record">
+            <table class="table">
+                <tr>
+                    <td><input type="checkbox" class="">&thinsp;環保餐盒&ensp;<select class="select" name="numbers">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select></td>
+                    <td><input type="checkbox" class="">&thinsp;環保吸管&ensp;<select class="select" name="numbers">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select></td>
+                    <td><input type="checkbox" class="">&thinsp;大眾運輸&ensp;<select class="select" name="numbers">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="">&thinsp;環保袋&emsp;&ensp;<select class="select" name="numbers">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select></td>
+                    <td><input type="checkbox" class="">&thinsp;環保筷&emsp;&ensp;<select class="select" name="numbers">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select></td>
+                    <td><input type="checkbox" class="">&thinsp;環保杯&emsp;&ensp;<select class="select" name="numbers">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <button class="btn" type="button">確&emsp;定</button>
             </div>
-            <div class="co_record">
-                <table class="table">
-                    <tr>
-                        <td><input type="checkbox" class="">&thinsp;環保餐盒&ensp;<select class="select" name="numbers">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                            </select></td>
-                        <td><input type="checkbox" class="">&thinsp;環保吸管&ensp;<select class="select" name="numbers">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                            </select></td>
-                        <td><input type="checkbox" class="">&thinsp;大眾運輸&ensp;<select class="select" name="numbers">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                            </select></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" class="">&thinsp;環保袋&emsp;&ensp;<select class="select"
-                                name="numbers">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                            </select></td>
-                        <td><input type="checkbox" class="">&thinsp;環保筷&emsp;&ensp;<select class="select"
-                                name="numbers">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                            </select></td>
-                        <td><input type="checkbox" class="">&thinsp;環保杯&emsp;&ensp;<select class="select"
-                                name="numbers">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                            </select></td>
-                    </tr>
-                </table>
+        <div class="garrec">
+            <div class="garrec-txt">
+                <div>
+                    &emsp;環保餐盒&ensp;<span>1<!--數量--></span>個
+                </div>
+                <div>
+                    -0.0003kg&emsp;
+                </div>
             </div>
-            <div>
-                <div class="garrec">
-                  &ensp;1230
+            <div class="garrec-txt">
+                <div>
+                    &emsp;環保餐盒&ensp;<span>1<!--數量--></span>個
+                </div>
+                <div>
+                    -0.0003kg&emsp;
+                </div>
+            </div>
+            <div class="garrec-txt">
+                <div>
+                    &emsp;環保餐盒&ensp;<span>1<!--數量--></span>個
+                </div>
+                <div>
+                    -0.0003kg&emsp;
                 </div>
             </div>
 
+        </div>
+
+   <div>
     </div>
-
-
+   </div>
+   <button></button>
     </div>
 
 

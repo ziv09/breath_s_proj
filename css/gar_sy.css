@@ -117,11 +117,46 @@ input[type="checkbox"]:hover {
 }
 
 .garrec{
+margin-top: 20px;
+width: 1230px;
+height: 300px;
+overflow: auto;
+margin-top:30px;
+}
+
+.garrec-txt{
+    display: flex;
+    justify-content: space-between;
     height: 50px;
     width: 1200px;
     background-color: lightgray;
     font-size: 30px;
-    border-radius: 20px;
+    border-radius: 25px;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.garrec-txt:hover{
+    background-color: #218919;
+    color: #fff;
+}
+
+.btn{
+    font-family: 'MantouSans-Regular';
+    width: 1210px;
+    outline: none;
+    border: none;
+    font-weight: 300;
+    font-size: 30px;
+    cursor: pointer;
     margin-top: 20px;
+    background-color: #bf8b2e;
+    color: #fff;
+
+}
+
+.btn:hover{
+    background-color: #218919;
+    color: #fff;
 }
 
