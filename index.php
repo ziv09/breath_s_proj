@@ -22,7 +22,7 @@ session_start();
             <nav>
                 <ul id="barstyle">
                     <li><a href="./login.php" id="bar">Account</a></li>
-                    <li><a href="./amount.php" id="bar">Money</a></li>
+                    <li><a href="./tree.php" id="bar">Money</a></li>
                     <li><a href="./map.php" id="bar">Map</a></li>
                     <li><a href="./about.php" id="bar">About</a></li>
                 </ul>

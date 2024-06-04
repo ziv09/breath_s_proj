@@ -20,6 +20,14 @@
         var formattedDate = currentDate.toLocaleDateString("zh-Hant", options);
         document.getElementById("current-date").innerText = formattedDate;
     });
+
+
+    document.getElementById('btn').addEventListener('click', functio n() {
+        window.location.href = 'amount.php';
+    });
+
+
+
 </script>
 
 <body class="body">
@@ -30,7 +38,7 @@
                 <ul class="barstyle">
                     <li><a href="./index.php" id="bar">Home</a></li>
                     <li><a href="./login.php" id="bar">Account</a></li>
-                    <li><a href="./amount.php" id="bar">Money</a></li>
+                    <li><a href="./tree.php" id="bar">Money</a></li>
                     <li><a href="./map.php" id="bar">Map</a></li>
                     <li><a href="./about.php" id="bar">About</a></li>
                 </ul>
@@ -162,21 +170,15 @@
 
             </div>
             <div class="tree">
-            <span class="span1">呼吸樹</span><span class="span2">2</span><span class="span1">顆&ensp;/&ensp;節省碳排</span><span class="span2">10</span><span class="span1">公斤</span>
+                <span class="span1">呼吸樹</span><span class="span2">2</span><span
+                    class="span1">顆&ensp;/&ensp;節省碳排</span><span class="span2">10</span><span class="span1">公斤</span>
             </div>
         </div>
         <div class="r-container">
-            <button onclick="window.location.href = './amount.php';" class="circle-btn" id="btn"><span>NEXT</span></button>
+            <button onclick="window.location.href = './amount.php';" class="circle-btn"
+                id="btn"><span>NEXT</span></button>
         </div>
     </div>
-
-
-
-
-
-
-
 </body>
-<script src="nextpage.js"></script>
 
 </html>
