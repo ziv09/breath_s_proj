@@ -84,7 +84,7 @@ $other_r = getExpenditureRatio($conn, $mail, $total_expend, "其他"); // 其他
                 <ul class="barstyle">
                     <li><a href="./index.php" id="bar">Home</a></li>
                     <li><a href="./login.php" id="bar">Account</a></li>
-                    <li><a href="./tree.php" id="bar">Money</a></li>
+                    <li><a href="./gar.php" id="bar">Money</a></li>
                     <li><a href="./map.php" id="bar">Map</a></li>
                     <li><a href="./about.php" id="bar">About</a></li>
                 </ul>
@@ -195,10 +195,6 @@ $other_r = getExpenditureRatio($conn, $mail, $total_expend, "其他"); // 其他
                     </div>
                     <div class="journal">
                         <div class="journaldiv">
-                            <div>
-                                <div><span style="font-size: 30px;">垃圾量</span></div>
-                                <div><input class="garbrecord" type="text" name="garbageAmount"></div>
-                            </div>
                             <div>
                                 <div><span style="font-size: 30px;">每日小記</span></div>
                                 <div><textarea class="jourrecord" type="text" name="memo"></textarea></div>
