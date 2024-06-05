@@ -3,7 +3,7 @@ header('Content-Type: application/json');
 require_once 'conn.php';
 session_start();
 
-$sql = "SELECT `lat`, `lng` FROM buyitems";
+$sql = "SELECT `lat`, `lng` FROM mytree";
 if (!$result = mysqli_query($conn, $sql)) {
     echo json_encode([
         'status' => 'error',

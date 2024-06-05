@@ -13,10 +13,22 @@ $user_data = mysqli_fetch_array($result);
 if (isset($_SESSION['mail'])) {
     $mail = $_SESSION['mail'];
 
-    $sql = "SELECT SUM(garbageAmount) FROM buyitems WHERE mail = '$mail'";
-    if ($result = mysqli_query($conn, $sql)) {
-        $mytree = mysqli_fetch_assoc($result)['SUM(garbageAmount)'];
+    $all_save = 0;
+
+    $sql = "SELECT d.eid, d.num, ef.save
+        FROM mytree m
+        JOIN details d ON m.mid = d.mid
+        JOIN environmental_friendly ef ON d.eid = ef.eid
+        WHERE m.mail = '$mail';";
+    $result = mysqli_query($conn, $sql);
+    $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    foreach ($data as $row) {
+        $total_save = $row['num'] * $row['save'];
+        $all_save += $total_save;
     }
+
+    $mytree = (int) ($all_save / 0.06);
 } else {
     $mytree = 0;
 }

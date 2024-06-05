@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1:3306
--- 產生時間： 2024-05-28 12:34:20
+-- 產生時間： 2024-06-05 17:34:58
 -- 伺服器版本： 10.4.24-MariaDB
 -- PHP 版本： 8.1.6
 
@@ -42,7 +42,8 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`mail`, `phone`, `name`, `pwd`) VALUES
-('111@g', '0912345678', '蔡承融', '123');
+('111@g', '0912345678', '書偉', '123'),
+('222@g', '0912345678', '小楊', '123');
 
 -- --------------------------------------------------------
 
@@ -52,27 +53,62 @@ INSERT INTO `account` (`mail`, `phone`, `name`, `pwd`) VALUES
 
 DROP TABLE IF EXISTS `buyitems`;
 CREATE TABLE `buyitems` (
+  `bid` int(11) NOT NULL,
   `mail` varchar(50) NOT NULL,
   `record` varchar(6) NOT NULL,
   `class` varchar(10) NOT NULL,
   `object` varchar(20) NOT NULL,
   `price` char(10) NOT NULL,
-  `garbageAmount` char(20) DEFAULT NULL,
   `memo` varchar(100) NOT NULL,
-  `lat` varchar(20) NOT NULL,
-  `lng` varchar(20) NOT NULL,
   `time` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
 --
--- 傾印資料表的資料 `buyitems`
+-- 資料表結構 `details`
 --
 
-INSERT INTO `buyitems` (`mail`, `record`, `class`, `object`, `price`, `garbageAmount`, `memo`, `lat`, `lng`, `time`) VALUES
-('111@g', '支出', '早餐', '好吃早餐', '50', '0', '', '24.1494706', '120.6835052', '2024-05-28'),
-('111@g', '支出', '午餐', '好吃午餐', '120', '3', '', '24.1494706', '120.6835052', '2024-05-28'),
-('111@g', '支出', '娛樂', '好讚娛樂', '900', '10', '天氣真好', '24.1494706', '120.6835052', '2024-05-28'),
-('111@g', '支出', '早餐', '好吃早餐', '10', '0', '天氣不好', '24.149452', '120.6835069', '2024-05-27');
+DROP TABLE IF EXISTS `details`;
+CREATE TABLE `details` (
+  `did` int(10) NOT NULL,
+  `eid` int(10) NOT NULL,
+  `num` int(10) NOT NULL,
+  `mid` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- 傾印資料表的資料 `details`
+--
+
+INSERT INTO `details` (`did`, `eid`, `num`, `mid`) VALUES
+(1, 6, 10, 1),
+(2, 3, 10, 3);
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `environmental_friendly`
+--
+
+DROP TABLE IF EXISTS `environmental_friendly`;
+CREATE TABLE `environmental_friendly` (
+  `eid` int(10) NOT NULL,
+  `EFObject` varchar(100) NOT NULL,
+  `save` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- 傾印資料表的資料 `environmental_friendly`
+--
+
+INSERT INTO `environmental_friendly` (`eid`, `EFObject`, `save`) VALUES
+(1, '環保餐盒', 0.3),
+(2, '環保吸管', 0.00533),
+(3, '大眾運輸', 0.69),
+(4, '環保袋', 0.057),
+(5, '環保筷', 0.02),
+(6, '環保杯', 0.0000032);
 
 -- --------------------------------------------------------
 
@@ -90,42 +126,25 @@ CREATE TABLE `messageboard` (
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `opinion`
+-- 資料表結構 `mytree`
 --
 
-DROP TABLE IF EXISTS `opinion`;
-CREATE TABLE `opinion` (
-  `time` char(10) NOT NULL,
-  `mail` char(50) NOT NULL,
-  `feeback` varchar(100) NOT NULL
+DROP TABLE IF EXISTS `mytree`;
+CREATE TABLE `mytree` (
+  `mid` int(10) NOT NULL,
+  `mail` varchar(50) NOT NULL,
+  `lat` varchar(20) NOT NULL,
+  `lng` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
 --
--- 資料表結構 `total`
+-- 傾印資料表的資料 `mytree`
 --
 
-DROP TABLE IF EXISTS `total`;
-CREATE TABLE `total` (
-  `date` datetime NOT NULL,
-  `mail` char(20) NOT NULL,
-  `Amount` varchar(100) NOT NULL,
-  `class` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- 資料表結構 `tree`
---
-
-DROP TABLE IF EXISTS `tree`;
-CREATE TABLE `tree` (
-  `tId` char(10) NOT NULL,
-  `treeAmoumt` char(10) DEFAULT NULL,
-  `class` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `mytree` (`mid`, `mail`, `lat`, `lng`) VALUES
+(1, '111@g', '24.1495281', '120.6835834'),
+(2, '111@g', '24.1495531', '120.6835196'),
+(3, '111@g', '24.1495531', '120.6835196');
 
 --
 -- 已傾印資料表的索引
@@ -138,22 +157,62 @@ ALTER TABLE `account`
   ADD PRIMARY KEY (`mail`);
 
 --
+-- 資料表索引 `buyitems`
+--
+ALTER TABLE `buyitems`
+  ADD PRIMARY KEY (`bid`);
+
+--
+-- 資料表索引 `details`
+--
+ALTER TABLE `details`
+  ADD PRIMARY KEY (`did`);
+
+--
+-- 資料表索引 `environmental_friendly`
+--
+ALTER TABLE `environmental_friendly`
+  ADD PRIMARY KEY (`eid`);
+
+--
 -- 資料表索引 `messageboard`
 --
 ALTER TABLE `messageboard`
   ADD PRIMARY KEY (`time`,`mail`);
 
 --
--- 資料表索引 `opinion`
+-- 資料表索引 `mytree`
 --
-ALTER TABLE `opinion`
-  ADD PRIMARY KEY (`time`,`mail`);
+ALTER TABLE `mytree`
+  ADD PRIMARY KEY (`mid`);
 
 --
--- 資料表索引 `total`
+-- 在傾印的資料表使用自動遞增(AUTO_INCREMENT)
 --
-ALTER TABLE `total`
-  ADD PRIMARY KEY (`date`,`mail`);
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `buyitems`
+--
+ALTER TABLE `buyitems`
+  MODIFY `bid` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `details`
+--
+ALTER TABLE `details`
+  MODIFY `did` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `environmental_friendly`
+--
+ALTER TABLE `environmental_friendly`
+  MODIFY `eid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `mytree`
+--
+ALTER TABLE `mytree`
+  MODIFY `mid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

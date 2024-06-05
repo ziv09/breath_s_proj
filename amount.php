@@ -75,7 +75,7 @@ $other_r = getExpenditureRatio($conn, $mail, $total_expend, "其他"); // 其他
 
 <body class="body">
     <!-- 在 amount.php 中 -->
-<div id="scrollTo"></div>
+    <div id="scrollTo"></div>
 
     <div class="barcon">
         <img src="./images/logo.png" alt="">
@@ -234,8 +234,6 @@ $other_r = getExpenditureRatio($conn, $mail, $total_expend, "其他"); // 其他
                             <div class="calc-btn column" id="calc-clear">AC</div>
                             <div class="calc-btn column" id="calc-backspace">◀︎</div>
                             <div class="calc-check-btn column" id="calc-equals">=</div>
-                            <input type="hidden" id="lat" name="lat">
-                            <input type="hidden" id="lng" name="lng">
                         </div>
                     </div>
                 </div>

@@ -14,19 +14,13 @@ if (isset($_GET['object']) && !empty($_GET['object']))
     $object = $_GET['object'];
 if (isset($_GET['price']) && !empty($_GET['price']))
     $price = $_GET['price'];
-if (isset($_GET['garbageAmount']))
-    $garbageAmount = $_GET['garbageAmount'];
 if (isset($_GET['memo']))
     $memo = $_GET['memo'];
-if (isset($_GET['lat']))
-    $lat = $_GET['lat'];
-if (isset($_GET['lng']))
-    $lng = $_GET['lng'];
 if (isset($_GET['time']))
     $time = $_GET['time'];
 
-$sql = "INSERT INTO `buyitems` (`mail`, `record`, `class`, `object`, `price`, `garbageAmount`, `memo`, `lat`, `lng`, `time`) 
-        VALUES ('$mail', '$record', '$class', '$object', '$price', '$garbageAmount', '$memo', '$lat', '$lng', '$time')";
+$sql = "INSERT INTO `buyitems` (`mail`, `record`, `class`, `object`, `price`, `memo`, `time`) 
+        VALUES ('$mail', '$record', '$class', '$object', '$price', '$memo', '$time')";
 if ($result = mysqli_query($conn, $sql)) {
     header("Location: ../amount.php");
 }
