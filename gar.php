@@ -30,7 +30,7 @@
 
 </script>
 
-<body class="body">
+<body class="body_slide">
     <div class="barcon">
         <img src="./images/logo.png" alt="">
         <div>

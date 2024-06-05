@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
-<body class="body">
+<body class="body_slide">
     <div class="barcon">
         <div>
             <nav>
