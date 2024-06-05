@@ -21,6 +21,13 @@ if (isset($_SESSION['mail'])) {
     $mytree = 0;
 }
 
+// 登出功能
+if (isset($_GET['logout'])) {
+    session_unset();
+    session_destroy();
+    header("Location: index.php");
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -55,9 +62,8 @@ if (isset($_SESSION['mail'])) {
     <div class="accimf">
         <div class="imf">
             <img id="accimg" src="./images/unnamed.jpg"><!--頭貼要接php-->
-            <span class="span3"><?= $user_data['name'] ?></span>
+            <span class="span3"><?= $user_data['name'] ?></span>&ensp;<a href="?logout">登出</a>
         </div>
-
     </div>
     <div class="accconec">
         <div>

@@ -17,19 +17,6 @@ if (isset($_SESSION['mail']))
 </head>
 
 <body class="body_login">
-    <div class="barcon">
-        <div>
-            <nav>
-                <ul class="barstyle">
-                    <li><a href="./index.php" id="bar">Home</a></li>
-                    <li><a href="./login.php" id="bar">Account</a></li>
-                    <li><a href="./gar.php" id="bar">Money</a></li>
-                    <li><a href="./map.php" id="bar">Map</a></li>
-                    <li><a href="./about.php" id="bar">About</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
     <div class="login">
         <div class="login_set">
             <div class="login_txt">

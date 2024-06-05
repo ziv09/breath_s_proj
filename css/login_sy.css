@@ -1,11 +1,7 @@
 .bodyacc {
     font-family: 'MantouSans-Regular';
     background-color: #F4F4F4;
-<<<<<<< HEAD
     background-image: url(./images/b-logo.png);
-=======
-    background-image: url(../images/b-logo.png);
->>>>>>> 2a96164 (123)
     background-repeat: no-repeat;
     background-size: 1920px 1080px;
     background-position: 1200px 20px;
@@ -60,6 +56,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 1000px;
     }
 
     #login_tit {

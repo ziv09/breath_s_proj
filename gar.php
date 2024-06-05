@@ -18,19 +18,25 @@
         var currentDate = new Date();
         var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
         var formattedDate = currentDate.toLocaleDateString("zh-Hant", options);
-        document.getElementById("current-date").innerText = formattedDate;
+        document.getElementById("datetxt").innerText = formattedDate;
     });
-
-
-    document.getElementById('btn').addEventListener('click', functio n() {
-        window.location.href = 'amount.php';
-    });
-
-
+    
+    function checkLogin() {
+        // 檢查是否有登入
+        <?php
+        session_start();
+        if (!isset($_SESSION['mail'])) {
+            // 彈出視窗提示要求登入
+            echo "alert('請先登入帳號');";
+            // 導向到登入頁面
+            echo "window.location.href = './login.php';";
+        }
+        ?>
+    }
 
 </script>
 
-<body class="body_slide">
+<body class="body_slide" onload="checkLogin()">
     <div class="barcon">
         <img src="./images/logo.png" alt="">
         <div>
@@ -48,7 +54,7 @@
     <div class="container">
         <div class="l-container">
             <div class="date">
-                日常節省&ensp;|&ensp;<span id="current-date"></span>
+                日常節省&ensp;|&ensp;<span id="datetxt"></span>
             </div>
             <div class="co_record">
                 <table class="table">
@@ -167,7 +173,6 @@
                         -0.0003kg&emsp;
                     </div>
                 </div>
-
             </div>
             <div class="tree">
                 <span class="span1">呼吸樹</span><span class="span2">2</span><span
