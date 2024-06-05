@@ -1,42 +1,66 @@
 <?php
-require_once './php/conn.php'; // 使用 conn.php 來設置資料庫連接
 session_start();
+require_once './php/conn.php'; 
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
 
 
-// 處理表單提交
+function isValidEmail($email)
+{
+    return filter_var($email, FILTER_VALIDATE_EMAIL);
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $message = $_POST['message'];
-    $time = date("Y-m-d H:i:s");
+    $current_time = date("Y-m-d H:i:s");
 
-    // 插入資料到資料表
-    $sql = "INSERT INTO messageboard (time, mail, message) VALUES ('$time', '$email', '$message')";
+    if (isValidEmail($email) && !empty($message)) {
+        $sql = "INSERT INTO messageboard (time, mail, message) VALUES ('$current_time', '$email', '$message')";
+        if ($conn->query($sql) === TRUE) {
+            $mail = new PHPMailer(true);
+            $mail->CharSet = 'UTF-8';
+            $mail->Encoding = 'base64'; 
 
-    if ($conn->query($sql) === TRUE) {
-        $feedback = "意見回饋已成功提交！";
+            try {
+                $mail->isSMTP();
+                $mail->Host = 'smtp.gmail.com';
+                $mail->SMTPAuth = true;
+                $mail->Username = 'breathlive00@gmail.com'; 
+                $mail->Password = 'gezt dlmp xzcj iozg'; 
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+                $mail->Port = 587;
 
-        // 發送郵件
-        $to = "breathlive00@gmail.com";
-        $subject = "新意見回饋";
-        $body = "您收到一條新的意見回饋:\n\n" .
-                "時間: $time\n" .
-                "Email: $email\n" .
-                "訊息: $message\n";
-        $headers = "From: $email";
+                // 收件人
+                $mail->setFrom('no-reply@yourdomain.com', '意見回饋');
+                $mail->addAddress('breathlive00@gmail.com');
 
-        if (mail($to, $subject, $body, $headers)) {
-            $feedback .= " 郵件已成功發送！";
+                // 內容
+                $mail->isHTML(true);
+                $mail->Subject = '新的意見回饋';
+                $mail->Body = "您收到一條新的意見回饋:<br><br>時間: $current_time<br>Email: $email<br>訊息: $message<br>";
+                $mail->AltBody = "您收到一條新的意見回饋:\n\n時間: $current_time\nEmail: $email\n訊息: $message\n";
+
+                $mail->send();
+                echo "<script>alert('郵件已成功發送');</script>";
+            } catch (Exception $e) {
+                echo "<script>alert('但郵件發送失敗。錯誤: {$mail->ErrorInfo}');</script>"; 
+            }
         } else {
-            $feedback .= " 但郵件發送失敗。";
+            echo "<script>alert('資料庫錯誤: " . $conn->error . "');</script>"; 
         }
     } else {
-        $feedback = "錯誤: " . $sql . "<br>" . $conn->error;
+        echo "<script>alert('請輸入有效的電子郵件和訊息。');</script>"; 
     }
-
-    // 關閉連接
     $conn->close();
 }
 ?>
+
 <!DOCTYPE html>
 <html>
 
