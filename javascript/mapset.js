@@ -1,6 +1,6 @@
 // var url = 'https://ruienyuski.github.io/git_test/itaiwan.json';//定位座標
 // var url = 'http://127.0.0.1:8080/sai_xampp/git%20push/breath_s_proj/json/place.json';//定位座標
-var url = 'http://127.0.0.1:8080/sai_xampp/git%20push/breath_s_proj/php/api_map.php';//定位座標
+var url = 'http://localhost:80/breath_s_proj/php/api_map.php';//定位座標
 
 function initMap() {
   //設定中心點座標

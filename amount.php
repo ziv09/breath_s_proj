@@ -188,7 +188,7 @@ $other_r = getExpenditureRatio($conn, $mail, $total_expend, "其他"); // 其他
                                     <span class="spendintr_txt"><?= $spendintr ?></span>
                                 </div>
                                 <input type="hidden" name="class" value="<?= $spendintr ?>">
-                                <input class="spendrecord" type="text" name="object">
+                                <!-- <input class="spendrecord" type="text" name="object"> -->
                                 <input class="column input_reset" id="calc-display-val" name="price" value="0" read>
                             </div>
                         </div>
@@ -247,10 +247,7 @@ $other_r = getExpenditureRatio($conn, $mail, $total_expend, "其他"); // 其他
                     <span style="font-size: 40px;">總支出</span>
                     &emsp;<span style="font-size: 50px; color: #218919;"><?= $total_expend ?></span>
                 </div>
-                <div>
-                    <span style="font-size: 40px;">總收入</span>
-                    &emsp;<span style="font-size: 50px; color: #218919;"><?= $total_income ?></span>
-                </div>
+
             </div>
             <div class="recordintr">
                 <div class="col_vice"><!--數字串php-->
